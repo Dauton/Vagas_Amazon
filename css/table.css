@@ -1,0 +1,21 @@
+:root {
+    --azul-id-color: #00437d;
+    --vermelho-id-color: #eb1220;
+}
+
+table {
+    margin: 20px;
+    border-collapse: collapse;  
+    font-size: 12px;
+    box-shadow: 0 0 .3em #cdcdcd;
+}
+table td {
+    border: none;
+    border-bottom: 1px solid var(--azul-id-color);
+    padding: 4px 10px;
+}
+table thead {
+    background: var(--azul-id-color);
+    color: #ffffff;
+    text-align: center;
+}

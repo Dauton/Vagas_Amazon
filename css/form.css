@@ -1,0 +1,46 @@
+:root {
+    --azul-id-color: #00437d;
+    --vermelho-id-color: #eb1220;
+}
+
+form {
+    width: 250px;
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0 0 .3em #cdcdcd;
+    border-radius: 7px;
+}
+form h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+form i {
+    font-size: 30px;
+}
+form label {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 10px;
+}
+form input, form select {
+    width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    border: 2px solid var(--azul-id-color);
+}
+form button {
+    width: 90%;
+    margin-top: 30px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    background: var(--azul-id-color);
+    cursor: pointer;
+}
