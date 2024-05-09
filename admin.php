@@ -5,8 +5,25 @@
     require_once "php/login/verifica_sessao.php";
     require_once "php/login/protecao.php";
 
+    //========= EXIBE TODAS AS VAGAS CADASTRADA =========//
     $exibe = new Vagas($pdo);
     $exibeVagas = $exibe->exibeVagas();
+    //===================================================//
+
+
+    //========= EXCLUI A VAGA DA LISTA =========//
+    if($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+        $excluiVaga = new Vagas($pdo);
+        $excluiVaga->excluiVaga($_POST['id']);
+
+        header("Refresh: 2 admin.php");
+        echo "Vaga excluída com sucesso!";
+        die();
+    }
+    //===================================================//
+
+    
 
 ?>
 
@@ -18,6 +35,9 @@
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">         
     <script src="https://kit.fontawesome.com/d8ed80570b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -37,8 +57,8 @@
                         <td>Estado</td>
                         <td>Cidade</td>
                         <td>Candidatura</td>
-                        <td>Editar</td>
-                        <td>Excluir</td>
+                        <td>Edição</td>
+                        <td>Exclusão</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,8 +67,17 @@
                         <td><?= htmlentities($exibe['uf']) ?></td>
                         <td><?= htmlentities($exibe['cidade']) ?></td>
                         <td><a href="#"><?= htmlentities($exibe['link']) ?></a></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <form>
+                                <a href="editar_vaga.php?id=<?= $exibe['id'] ?>" id="btn-editar">Editar</a>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="post">
+                                <input type="hidden" name="id" value="<?= $exibe['id'] ?>">
+                                <button id="btn-excluir">Excluir</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php endforeach ?>
                 </tbody>

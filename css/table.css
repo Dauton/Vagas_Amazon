@@ -19,3 +19,30 @@ table thead {
     color: #ffffff;
     text-align: center;
 }
+
+table form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+}
+table form button, table form button a {
+    width: 60px;
+    font-size: 10px;
+    margin: 0 auto;
+    background: #ff4949;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+table form #btn-editar {
+    width: 60px;
+    padding: 3.5px;
+    border-radius: 3px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+    background: #008cff;
+}

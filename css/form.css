@@ -18,10 +18,10 @@ form {
 form h1 {
     margin-bottom: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
 }
 form i {
-    font-size: 30px;
+    font-size: 25px;
 }
 form label {
     width: 100%;
@@ -43,4 +43,9 @@ form button {
     color: #ffffff;
     background: var(--azul-id-color);
     cursor: pointer;
+}
+form p {
+    margin-top: 15px;
+    font-size: 11px;
+    text-align: center;
 }

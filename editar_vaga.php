@@ -5,15 +5,18 @@ require_once "php/Repositorio/Vagas.php";
 require_once "php/login/verifica_sessao.php";
 require_once "php/login/protecao.php";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if($_SERVER['REQUEST_METHOD'] === 'POST')
+{
+    $editaVaga = new Vagas($pdo);
+    $editaVaga->editaVaga($_POST['id'], $_POST['uf'], $_POST['cidade'], $_POST['link']);
 
-    $cadastraVaga = new Vagas($pdo);
-    $cadastraVaga->cadastraVaga($_POST['uf'], $_POST['cidade'], $_POST['link']);
-
-    header("Refresh: 2 cadastrar_vaga.php");
-    echo "Vaga cadastrada com sucesso!";
+    header("Refresh: 2 admin.php");
+    echo "Vaga editada com sucesso!";
     die();
 }
+
+$buscaIdVaga = new Vagas($pdo);
+$vaga = $buscaIdVaga->buscaIdVaga($_GET['id']);
 
 ?>
 
@@ -24,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Login</title>
+    <title>Editar vaga</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <label>Estado UF
                     <select name="uf" required>
-                        <option selected value="">Selecione o estado UF</option>
+                        <option selected value="<?= $vaga['uf'] ?>"><?= $vaga['uf'] ?></option>
                         <option>Roraima</option>
                         <option>Alagoas</option>
                         <option>Amapá</option>
@@ -80,14 +83,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </label>
 
                 <label>Cidade
-                    <input type="text" name="cidade" placeholder="Insira a cidade" required>
+                    <input type="text" name="cidade" placeholder="Insira a cidade" value="<?= $vaga['cidade'] ?>" required>
                 </label>
 
                 <label>Link agência
-                    <input type="text" name="link" placeholder="Insira o link da agência" required autocomplete="new-password">
+                    <input type="text" name="link" placeholder="Insira o link da agência" value="<?= $vaga['link'] ?>" required autocomplete="new-password">
                 </label>
 
-                <button type="submit">Cadastrar</button>
+                <input type="hidden" name="id" value="<?= $vaga['id'] ?>">
+
+                <button type="submit">Editar</button>
 
             </form>
             <a href="admin.php"><button id="btn">Gerenciar vagas</button></a>
