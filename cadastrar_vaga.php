@@ -44,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li><a href="cadastrar_vaga.php"><button id="btn">Cadastrar nova vaga</button></a></li>
                     <li><a href="admin.php"><button id="btn">Gerenciar vagas</button></a></li>
                     <li><a href="cadastro_usuario.php"><button id="btn">Cadastrar usuário</button></a></li>
+                    <li><a href="admin_video.php"><button id="btn">Alterar vídeo</button></a></li>
                     <li><a href="php/login/logout.php"><button id="btn-logout">Sair</button></a></li>
                 </ul>
             </nav>

@@ -4,15 +4,38 @@ require_once "php/banco/conn.php";
 require_once "php/Repositorio/Usuario.php";
 require_once "php/login/verifica_sessao.php";
 require_once "php/login/protecao.php";
+require_once "php/function/style_erro_senha.php";
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
-    $cadastraUsuario = new Usuario($pdo);
-    $cadastraUsuario->cadastraUsuario($_POST['nome'], $_POST['usuario'], $_POST['senha']);
+    estiloErroSenha();
 
-    header("Refresh: 2 index.php");
-    echo "Usuário cadastrado com sucesso!";
-    die();
+    if(!(strlen($_POST['senha']) >= 12)) {
+
+        echo "<p class='erro'>A senha deve conter pelo menos 12 caracteres!</p>"; 
+
+    } elseif(!(preg_match("#[a-z]#", $_POST['senha']))) {
+
+        echo "<p class='erro'>A senha deve conter letras minusculas e maisculas!</p>";
+
+    } elseif(!(preg_match("#['A-Z]#", $_POST['senha']))) {
+        
+        echo "<p class='erro'>A senha deve conter letras minusculas maiusculas</p>";
+
+    } elseif(!(preg_match("#[0-9]#", $_POST['senha']))) {
+
+        echo "<p class='erro'>A senha deve conter números!</p>";
+
+    } else {
+
+        $cadastraUsuario = new Usuario($pdo);
+        $cadastraUsuario->cadastraUsuario($_POST['nome'], $_POST['usuario'], $_POST['senha']);
+    
+        header("Refresh: 2 index.php");
+        echo "Usuário cadastrado com sucesso!";
+        die();
+    }
+
 }
 
 ?>
@@ -42,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                     <li><a href="cadastrar_vaga.php"><button id="btn">Cadastrar nova vaga</button></a></li>
                     <li><a href="admin.php"><button id="btn">Gerenciar vagas</button></a></li>
                     <li><a href="cadastro_usuario.php"><button id="btn">Cadastrar usuário</button></a></li>
+                    <li><a href="admin_video.php"><button id="btn">Alterar vídeo</button></a></li>
                     <li><a href="php/login/logout.php"><button id="btn-logout">Sair</button></a></li>
                 </ul>
             </nav>

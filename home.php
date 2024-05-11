@@ -2,9 +2,13 @@
 
 require_once "php/banco/conn.php";
 require_once "php/Repositorio/Vagas.php";
+require_once "php/Repositorio/Video.php";
 
 $exibe = new Vagas($pdo);
 $exibeVagas = $exibe->exibeVagas();
+
+$video = new Video($pdo);
+$exibeVideo = $video->exibeVideo();
 
 ?>
 
@@ -39,7 +43,7 @@ $exibeVagas = $exibe->exibeVagas();
             <h1 class="center-title"><i class="fa-solid fa-star"></i> Conhecendo a ID Logistics</h1>
 
             <article class="center-sessao-imgs">
-                <h3>Somos um dos principais nomes da logística internacional 🌎</h3><br>
+                <h3>Somos um dos principais nomes da logística internacional 🌎</h3>
                 <p>A ID Logistics foi fundada na França em 2001 e há 20 anos desembarcou no Brasil já se tornando referência no mercado logístico brasileiro, com mais de 860 mil m² de área distribuída em 5 estados com cerca de 6.000 colaboradores.</p>
 
                 <img src="img/imagem08.jpg">
@@ -80,14 +84,13 @@ $exibeVagas = $exibe->exibeVagas();
             <h1 class="center-title"><i class="fa-solid fa-star"></i> #ORGULHO EM SER ID</h1>
 
             <article class="center-sessao-video">
-
-
-                <p><b>Aceleramos a transformação logística no Brasil 🇧🇷</b><br>
-                    Com mais de 9 mil colaboradores, a ID Logistics é uma das maiores operadoras logísticas do Brasil! Atualmente, contamos com um milhão de metros quadrados de armazenagem, destinados à logística de players de grande porte em mais de 60 centros de distribuição espalhados no território brasileiro. Acreditamos que nosso maior valor são as nossas pessoas, estamos focados no desenvolvimento de nossos talentos, de forma que todos os nossos colaboradores sintam orgulho em pertencer ao agora e ao futuro de nossa empresa. Somos um só time, com uma responsabilidade e um único objetivo. Aqui temos <b>#OrgulhoEmSerID!</b></p>
+                <h3>Aceleramos a transformação logística no Brasil 🇧🇷</h3>
+                <p>Com mais de 9 mil colaboradores, a ID Logistics é uma das maiores operadoras logísticas do Brasil! Atualmente, contamos com um milhão de metros quadrados de armazenagem, destinados à logística de players de grande porte em mais de 60 centros de distribuição espalhados no território brasileiro. Acreditamos que nosso maior valor são as nossas pessoas, estamos focados no desenvolvimento de nossos talentos, de forma que todos os nossos colaboradores sintam orgulho em pertencer ao agora e ao futuro de nossa empresa. Somos um só time, com uma responsabilidade e um único objetivo. Aqui temos <b>#OrgulhoEmSerID!</b></p>
 
                 
-                <iframe width="720" height="405" src="https://www.youtube.com/embed/KnEzHdFAN9M?si=n-MLOTzXsfnFOaCz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+                <?php foreach($exibeVideo as $video) : ?>
+                    <?= $video['iframe'] ?>
+                <?php endforeach ?>
             </article>
 
         </section>
