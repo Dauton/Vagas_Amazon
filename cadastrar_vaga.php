@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Login</title>
+    <title>Cadastrar vaga</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <header class="cabecalho">
             <img src="img/id-logo-branco-extenso.png">
-            <a href="php/login/logout.php" id="btn-logout">Sair</a>
+            
+            <nav>
+                <ul>
+                    <li><a href="cadastrar_vaga.php"><button id="btn">Cadastrar nova vaga</button></a></li>
+                    <li><a href="admin.php"><button id="btn">Gerenciar vagas</button></a></li>
+                    <li><a href="cadastro_usuario.php"><button id="btn">Cadastrar usuário</button></a></li>
+                    <li><a href="php/login/logout.php"><button id="btn-logout">Sair</button></a></li>
+                </ul>
+            </nav>
         </header>
 
         <section class="centro">
@@ -89,8 +97,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <button type="submit">Cadastrar</button>
 
+                <p>Cadastro de vaga</p>
+
             </form>
-            <a href="admin.php"><button id="btn">Gerenciar vagas</button></a>
         </section>
         <footer class="rodape">
             <small>Divulgação de vagas (Agências) - ID DO BRASIL LOGISTICA LTDA - 2024</small>

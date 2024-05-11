@@ -1,0 +1,71 @@
+@media screen and (max-width: 960px) {
+    .cabecalho img {
+        width: 90px !important;
+    }
+
+    .cabecalho-title {
+        font-size: 8px !important;
+    }
+
+    .center,
+    .center-sessao-imgs,
+    .center-sessao-imgs img,
+    .center-sessao-mvv,
+    .center-sessao-video,
+    .center-sessao-mvv-boxs,
+    iframe,
+    table {
+        width: 100% !important;
+    }
+
+    .center {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .center-title {
+        font-size: 17px !important;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .center-sessao-mvv {
+        flex-direction: column;
+    }
+
+    .center-sessao-mvv-boxs {
+        margin: 10px 0 !important;
+    }
+
+    .center-sessao-video {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .center-sessao-video p {
+        margin: 0 !important;
+    }
+
+    .center-sessao-video iframe {
+        height: 300px !important;
+        box-shadow: none !important;
+    }
+
+    .vagas {
+        padding: 10px !important;
+    }
+
+    .vagas table {
+        font-size: 7px;
+    }
+
+    .vagas table td {
+        padding: 10px 5px;
+    }
+
+    .rodape {
+        font-size: 10px !important;
+    }
+}

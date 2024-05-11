@@ -4,7 +4,7 @@
 }
 
 form {
-    width: 250px;
+    width: 280px;
     margin: 10px;
     padding: 30px;
     display: flex;
@@ -30,9 +30,10 @@ form label {
 }
 form input, form select {
     width: 100%;
-    padding: 4px;
+    padding: 7px;
     border-radius: 4px;
-    border: 2px solid var(--azul-id-color);
+    border: none;
+    box-shadow: 0 0 .3em #cdcdcd;
 }
 form button {
     width: 90%;

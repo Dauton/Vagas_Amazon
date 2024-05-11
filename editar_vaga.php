@@ -41,7 +41,15 @@ $vaga = $buscaIdVaga->buscaIdVaga($_GET['id']);
 
         <header class="cabecalho">
             <img src="img/id-logo-branco-extenso.png">
-            <a href="php/login/logout.php" id="btn-logout">Sair</a>
+            
+            <nav>
+                <ul>
+                    <li><a href="cadastrar_vaga.php"><button id="btn">Cadastrar nova vaga</button></a></li>
+                    <li><a href="admin.php"><button id="btn">Gerenciar vagas</button></a></li>
+                    <li><a href="cadastro_usuario.php"><button id="btn">Cadastrar usuário</button></a></li>
+                    <li><a href="php/login/logout.php"><button id="btn-logout">Sair</button></a></li>
+                </ul>
+            </nav>
         </header>
 
         <section class="centro">
@@ -94,8 +102,9 @@ $vaga = $buscaIdVaga->buscaIdVaga($_GET['id']);
 
                 <button type="submit">Editar</button>
 
+                <p>Edição da vaga</p>
+
             </form>
-            <a href="admin.php"><button id="btn">Gerenciar vagas</button></a>
         </section>
         <footer class="rodape">
             <small>Divulgação de vagas (Agências) - ID DO BRASIL LOGISTICA LTDA - 2024</small>

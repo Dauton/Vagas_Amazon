@@ -7,17 +7,23 @@ table {
     margin: 20px;
     border-collapse: collapse;  
     font-size: 12px;
-    box-shadow: 0 0 .3em #cdcdcd;
+    box-shadow: 0 0 .3em #9c9c9c;
+    background: #dcefff;
+    border-radius: 5px;
+    overflow: hidden;
 }
 table td {
     border: none;
-    border-bottom: 1px solid var(--azul-id-color);
-    padding: 4px 10px;
+    border-bottom: 1px solid #008cff;
+    padding: 10px;
 }
 table thead {
-    background: var(--azul-id-color);
+    background: #008cff;
     color: #ffffff;
     text-align: center;
+}
+.ultima-coluna {
+    background: #b7dfff;
 }
 
 table form {
@@ -31,7 +37,7 @@ table form button, table form button a {
     width: 60px;
     font-size: 10px;
     margin: 0 auto;
-    background: #ff4949;
+    background: #ff5353;
     color: #ffffff;
     text-decoration: none;
 }
@@ -45,4 +51,11 @@ table form #btn-editar {
     text-decoration: none;
     font-size: 10px;
     background: #008cff;
+}
+table a {
+    padding: 5px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    background: var(--azul-id-color);
+    border-radius: 3px;
 }
