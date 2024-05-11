@@ -32,7 +32,7 @@ $exibeVideo = $video->exibeVideo();
 <body>
     <main class="principal">
         <header class="cabecalho">
-            <img src="img/logo-id-extenso.png">
+        <a href="https://www.id-logistics.com/br/" target="_blank"><img src="img/logo-id-extenso.png"></a>
             <div class="cabecalho-title">
                 <h1>TRABALHE EM UMA MULTINACIONAL REPLETA DE OPORTUNIDADES</h1>
                 <p>Conte com salário e benefícios competitívos no mercado, além da alta gama de oportunidades de crescimento profissional.</p>
@@ -51,7 +51,7 @@ $exibeVideo = $video->exibeVideo();
                 <img src="img/imagem02.jpg">
             </article>
 
-            <hr color="#daa520">
+            <hr>
 
             <h1 class="center-title"><i class="fa-solid fa-star"></i> Missão, Visão e Valores</h1>
 
@@ -79,7 +79,7 @@ $exibeVideo = $video->exibeVideo();
                 </section>
             </article>
 
-            <hr color="#daa520">
+            <hr>
 
             <h1 class="center-title"><i class="fa-solid fa-star"></i> #ORGULHO EM SER ID</h1>
 
@@ -91,6 +91,12 @@ $exibeVideo = $video->exibeVideo();
                 <?php foreach($exibeVideo as $video) : ?>
                     <?= $video['iframe'] ?>
                 <?php endforeach ?>
+            </article>
+
+            <article class="center-sessao-imgs">
+                <img src="img/imagem08.jpg">
+                <img src="img/imagem03.jpg">
+                <img src="img/imagem01.jpg">
             </article>
 
         </section>
@@ -131,6 +137,7 @@ $exibeVideo = $video->exibeVideo();
 
         </footer>
     </main>
+    <img src="img/id-logo.png" id="id-logo-transparente">
 </body>
 
 </html>

@@ -18,7 +18,7 @@ table td {
     padding: 10px;
 }
 table thead {
-    background: #008cff;
+    background: var(--azul-id-color);
     color: #ffffff;
     text-align: center;
 }
@@ -56,6 +56,11 @@ table a {
     padding: 5px 10px;
     color: #ffffff;
     text-decoration: none;
-    background: var(--azul-id-color);
+    background: #008cff;
     border-radius: 3px;
+    transition: .2s background
+}
+table a:hover {
+    background: #0066b9;
+    transition: .2s background;
 }

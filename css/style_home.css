@@ -10,6 +10,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 body {
@@ -45,9 +46,9 @@ body::-webkit-scrollbar-track {
 }
 .cabecalho-title {
     width: 100%;
-    padding: 35px;
+    padding: 45px;
     background: linear-gradient(to right, #00213e, #0088ff, #00213e);
-    color: white;
+    color: #ffffff;
     font-size: 15px;
 }
 .center {
@@ -56,8 +57,9 @@ body::-webkit-scrollbar-track {
     margin-bottom: 20px;
 }
 hr {
-    width: 30%;
+    width: 40%;
     margin: 20px auto;
+    border: .1px solid var(--azul-id-color);
 }
 .center-title {
     margin: 20px 0;
@@ -93,7 +95,7 @@ h3 {
 .center-sessao-imgs img {
     width: 30%;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0 0 .3em #cdcdcd;
     transition: 1s;
 }
@@ -116,6 +118,7 @@ h3 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: #ffffff;
     box-shadow: 0 0 .3em #cdcdcd;
     border-radius: 10px;
     text-align: center;
@@ -216,4 +219,13 @@ h3 {
     color: #ffffff;
     font-size: 30px;
     margin-right: 20px;
+}
+
+#id-logo-transparente {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: opacity(10%);
+    z-index: 0;
 }
