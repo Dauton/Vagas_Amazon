@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cadastrar vaga</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/id-logo-browser.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="text" name="link" placeholder="Insira o link da agência" required autocomplete="new-password">
                 </label>
 
-                <button type="submit">Cadastrar</button>
+                <button type="submit" id="btn">Cadastrar</button>
 
                 <p>Cadastro de vaga</p>
 

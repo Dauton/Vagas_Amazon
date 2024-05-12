@@ -33,6 +33,7 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Gerenciar vagas</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/id-logo-browser.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,6 +90,7 @@
                             </form>
                         </td>
                     </tr>
+                    
                     <?php endforeach ?>
                 </tbody>
             </table>

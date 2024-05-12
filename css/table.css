@@ -7,19 +7,18 @@ table {
     margin: 20px;
     border-collapse: collapse;  
     font-size: 12px;
-    box-shadow: 0 0 .3em #9c9c9c;
-    background: #dcefff;
+    background: #2a2a37;
     border-radius: 5px;
+    color: #ffffff;
     overflow: hidden;
 }
 table td {
     border: none;
-    border-bottom: 1px solid #008cff;
+    border-bottom: 1px solid #16161d;
     padding: 10px;
 }
 table thead {
     background: var(--azul-id-color);
-    color: #ffffff;
     text-align: center;
 }
 .ultima-coluna {

@@ -32,7 +32,8 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Editar vaga</title>
+    <title>Alterar vídeo</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/id-logo-browser.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +59,7 @@
             </nav>
         </header>
 
-        <section class="centro">
+        <section  id="centro-admin"">
             <form class="form-login" method="post">
                 <i class="fa-solid fa-video"></i>
 
@@ -73,9 +74,9 @@
                 <p>Altera o vídeo exibido na página</p>
 
             </form>
-            <br>
+
             <p>Video que está sendo exibido atualmente na página</p>
-            <br>
+            
             <?php foreach($exibeVideo as $video) : ?>
                 <?= $video['iframe'] ?>
             <?php endforeach ?>
@@ -94,9 +95,9 @@
         <h3>Como encontrar o iframe do vídeo no Youtube?</h3>
         <br>
             <p><b>1</b> - Acesse o vídeo desejado no Youtube.</p>
-            <p><b>2</b> -Clique no botão "Compartilhar".</p>
+            <p><b>2</b> - Clique no botão "Compartilhar".</p>
             <p><b>3</b> - Selecione a opção "Incorporar".</p>
-            <p><b>4</b> -Clique no botão "Copiar".</p>
+            <p><b>4</b> - Clique no botão "Copiar".</p>
             <p><b>5</b> - Agora basta colar o iframe no campo e alterar o vídeo!</p>
     </div>
 

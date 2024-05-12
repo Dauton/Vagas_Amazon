@@ -42,7 +42,7 @@ body::-webkit-scrollbar-track {
 }
 .cabecalho img {
     width: 120px;
-    margin: 0 30px 30px 0;
+    margin: 0 30px 20px 0;
 }
 .cabecalho-title {
     width: 100%;
@@ -134,8 +134,15 @@ h3 {
     align-items: center;
     justify-content: center;
     background: var(--azul-id-color);
+    box-shadow: inset -.1em -.2em .3em #00213e;
     border-radius: 50%;
     border: 3px solid #daa520;
+    transition: 1s;
+}
+
+.center-sessao-mvv-boxs div:hover {
+    transform: scale(1.1) rotate(10deg);
+    transition: 1s;
 }
 .center-sessao-mvv-boxs div img {
     width: 50px;
@@ -155,8 +162,8 @@ h3 {
     width: 100%;
 }
 .center-sessao-video iframe {
-    width: 720px;
-    height: 405px;
+    width: 1120px;
+    height: 605px;
     margin: 50px auto;
     box-shadow: 0 0 3em #000000;
     border-radius: 5px;
@@ -181,10 +188,22 @@ h3 {
 }
 
 .vagas table {
+    background: #e4ebf2;
     text-align: center;
+}
+
+.vagas table thead {
+    border: 5px solid #e4ebf2;
+}
+.vagas table tbody {
+    background: #ffffff;
+    color: #000000;
 }
 .vagas table td {
     width: 200px;
+    border: 5px solid #e4ebf2;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .vagas table td i {
     margin-left: 10px;

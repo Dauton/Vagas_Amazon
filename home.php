@@ -19,6 +19,7 @@ $exibeVideo = $video->exibeVideo();
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>ID Logistics</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/id-logo-browser.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style_home.css'>
 
@@ -40,7 +41,7 @@ $exibeVideo = $video->exibeVideo();
         </header>
         <section class="center">
 
-            <h1 class="center-title"><i class="fa-solid fa-star"></i> Conhecendo a ID Logistics</h1>
+            <h1 class="center-title"><i class="fa-solid fa-star"></i> Um pouco da ID Logitics</h1>
 
             <article class="center-sessao-imgs">
                 <h3>Somos um dos principais nomes da logística internacional 🌎</h3>
@@ -53,7 +54,7 @@ $exibeVideo = $video->exibeVideo();
 
             <hr>
 
-            <h1 class="center-title"><i class="fa-solid fa-star"></i> Missão, Visão e Valores</h1>
+            <h1 class="center-title"><i class="fa-solid fa-star"></i> Nossa missão, nossa visão e nossos valores</h1>
 
             <article class="center-sessao-mvv">
                 <section class="center-sessao-mvv-boxs">
@@ -94,8 +95,8 @@ $exibeVideo = $video->exibeVideo();
             </article>
 
             <article class="center-sessao-imgs">
-                <img src="img/imagem08.jpg">
                 <img src="img/imagem03.jpg">
+                <img src="img/imagem06.jpg">
                 <img src="img/imagem01.jpg">
             </article>
 
@@ -121,6 +122,7 @@ $exibeVideo = $video->exibeVideo();
                         <td class="ultima-coluna"><a href="<?= htmlentities($exibe['link']) ?>" target="_blank">Candidate-se <i class="fa-solid fa-forward"></i></a></td>
                     </tr>
                     <?php endforeach ?>
+                    
                 </tbody>
             </table>
 
@@ -133,7 +135,7 @@ $exibeVideo = $video->exibeVideo();
                 <a href="https://www.id-logistics.com/br/" target="_blank"><img src="img/id-logo-branco.png"></a>
             </div>
 
-            <small>Todos os direitos reservados | ID LOGISTICA DO BRASIL LTDA - 2024</small>
+            <small>&copy; Todos os direitos reservados | ID LOGISTICA DO BRASIL LTDA - 2024</small>
 
         </footer>
     </main>

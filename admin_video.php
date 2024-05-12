@@ -18,6 +18,7 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Gerenciar vagas</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/id-logo-browser.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,11 +45,9 @@
         </header>
 
         <section id="centro-admin">
-            <p>Vídeo exibido na página atualmente</p>
-            <br>
+            <p>Video que está sendo exibido atualmente na página</p>
             <?php foreach($exibeVideo as $video) : ?>
                 <?= $video['iframe'] ?>
-                <br>
                 <a href="altera_video.php?id=<?= $video['id'] ?>" id="btn">Alterar o vídeo</a>
             <?php endforeach ?>
             

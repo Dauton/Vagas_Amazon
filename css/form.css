@@ -30,19 +30,22 @@ form label {
 }
 form input, form select {
     width: 100%;
+    margin-top: 3PX;
     padding: 7px;
     border-radius: 4px;
     border: none;
     box-shadow: 0 0 .3em #cdcdcd;
+    font-size: 10px;
 }
 form button {
     width: 90%;
     margin-top: 30px;
-    padding: 4px;
+    padding: 5px;
     border: none;
     border-radius: 4px;
     color: #ffffff;
     background: var(--azul-id-color);
+    font-size: 10px;
     cursor: pointer;
 }
 form p {
