@@ -47,6 +47,7 @@
 
         <header class="cabecalho">
             <img src="img/id-logo-branco-extenso.png">
+            <i class="fa-solid fa-bars" id="btn-menu"></i>
             
             <nav>
                 <ul>
@@ -100,6 +101,9 @@
             <p><b>4</b> - Clique no botão "Copiar".</p>
             <p><b>5</b> - Agora basta colar o iframe no campo e alterar o vídeo!</p>
     </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/js.js"></script>
 
 </body>
 

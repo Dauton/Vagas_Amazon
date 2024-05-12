@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <header class="cabecalho">
             <img src="img/id-logo-branco-extenso.png">
-            
+            <i class="fa-solid fa-bars" id="btn-menu"></i>
             <nav>
                 <ul>
                     <li><a href="cadastrar_vaga.php"><button id="btn">Cadastrar nova vaga</button></a></li>
@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="text" name="link" placeholder="Insira o link da agência" required autocomplete="new-password">
                 </label>
 
-                <button type="submit" id="btn">Cadastrar</button>
+                <button type="submit">Cadastrar</button>
 
                 <p>Cadastro de vaga</p>
 
@@ -107,6 +107,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <small>Divulgação de vagas (Agências) - ID DO BRASIL LOGISTICA LTDA - 2024</small>
         </footer>
     </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/js.js"></script>
+
 </body>
 
 </html>

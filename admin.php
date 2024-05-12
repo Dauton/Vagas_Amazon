@@ -47,6 +47,7 @@
 
         <header class="cabecalho">
             <img src="img/id-logo-branco-extenso.png">
+            <i class="fa-solid fa-bars" id="btn-menu"></i>
             
             <nav>
                 <ul>
@@ -102,5 +103,9 @@
     </main>
 
     <a href="home.php" id="visualizar" title="Visualizar resultado" target="_blank"><i class="fa-solid fa-eye"></i></a>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/js.js"></script>
+    
 </body>
 </html>

@@ -32,6 +32,7 @@
 
         <header class="cabecalho">
             <img src="img/id-logo-branco-extenso.png">
+            <i class="fa-solid fa-bars" id="btn-menu"></i>
             
             <nav>
                 <ul>
@@ -56,5 +57,8 @@
             <small>Divulgação de vagas (Agências) - ID DO BRASIL LOGISTICA LTDA - 2024</small>
         </footer>
     </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/js.js"></script>
 </body>
 </html>
