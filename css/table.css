@@ -41,7 +41,7 @@ table form button, table form button a {
     text-decoration: none;
 }
 
-table form #btn-editar {
+table form #btn-editar, table form #btn-resetar, table form #btn-editar {
     width: 60px;
     padding: 3.5px;
     border-radius: 3px;
@@ -50,6 +50,12 @@ table form #btn-editar {
     text-decoration: none;
     font-size: 10px;
     background: #008cff;
+}
+table form #btn-resetar {
+    background: #daa520;
+}
+table form #btn-excluir {
+    background: #eb1220;
 }
 table a {
     padding: 5px 10px;

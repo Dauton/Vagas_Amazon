@@ -84,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         <section class="centro">
             <form class="form-login" method="post">
+
                 <i class="fa-solid fa-right-to-bracket"></i>
 
                 <label>Nova senha
@@ -94,9 +95,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                     <input type="password" name="repete_senha" placeholder="Repita a senha" required autocomplete="new-password">
                 </label>
 
-                <input type="hidden" name="id" value="<?= $_SESSION['id'] ?>">
+                <input type="hidden" name="id" value="<?= $_GET['id']?>">
 
-                <button type="submit">Cadastrar</button>
+                <button type="submit">Alterar</button>
 
                 <p>Alterar senha</p>
 

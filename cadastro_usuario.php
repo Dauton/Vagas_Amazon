@@ -38,6 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 }
 
+$usuario = new Usuario($pdo);
+$exibeUsuarios = $usuario->exibeUsuarios();
+
 ?>
 
 
@@ -97,6 +100,44 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 <p>Cadastro de usuário</p>
 
             </form>
+            <br>
+            <p>Gereniar usuários</p>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Nome</td>
+                        <td>Usuário</td>
+                        <td>Edição</td>
+                        <td>Senha</td>
+                        <td>Exclusão</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($exibeUsuarios as $usuario) : ?>
+                    <tr>
+                        <td><?= htmlentities($usuario['nome']) ?></td>
+                        <td><?= htmlentities($usuario['usuario']) ?></td>
+                        <td>
+                            <form>
+                                <a href="editar_vaga.php?id=<?= $usuario['id'] ?>" id="btn-editar">Editar</a>
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <a href="reseta_senha.php?id=<?= $usuario['id'] && $usuario['nome'] ?>" id="btn-resetar">Resetar</a>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="post">
+                                <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
+                                <button id="btn-excluir">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                    
+                    <?php endforeach ?>
+                </tbody>
+            </table>
         </section>
         <footer class="rodape">
             <small>Divulgação de vagas (Agências) - ID DO BRASIL LOGISTICA LTDA - 2024</small>

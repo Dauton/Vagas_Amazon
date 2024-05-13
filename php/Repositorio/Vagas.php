@@ -23,7 +23,7 @@ class Vagas
     //========= EXIBE TODAS AS VAGAS =========//
     public function exibeVagas(): array
     {
-        $sql = "SELECT * FROM tb_vagas ORDER BY ASC";
+        $sql = "SELECT * FROM tb_vagas";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);

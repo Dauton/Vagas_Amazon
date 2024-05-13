@@ -21,6 +21,6 @@ $("#btn-menu").click(function() {
 var btnAjuda = false;
 
 $("#ajuda").click(function() {
-    $(".box-ajuda").fadeToggle();
+    $(".box-ajuda").fadeToggle(100);
     btnAjuda = !btnAjuda;
 })

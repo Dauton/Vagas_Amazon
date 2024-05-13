@@ -9,6 +9,15 @@
             $this->pdo  = $pdo;
         }
 
+    //========= CADASTRA USUARIO =========//
+    public function exibeUsuarios() : array
+    {
+        $sql = "SELECT * FROM tb_usuarios";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $resultado;
+    }
 
 
     //========= CADASTRA USUARIO =========//
@@ -24,18 +33,6 @@
         }
         //==================================
 
-
-        //========= BUSCA ID DO USUARIO PARA TROCA DA SENHA =========//
-        public function buscaIdSenha(int $id) : array
-        {
-            $sql = "SELECT * FROM tb_usuarios WHERE id = ?";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->bindParam(1, $id);
-            $stmt->execute();
-            $resultado = $stmt->fetch();
-            return $resultado;
-        }
-        //==================================
 
         //========= ALTERAR A SENHA =========//
         public function minhaSenha(int $id, string $senha) : void
