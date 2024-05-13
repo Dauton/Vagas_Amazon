@@ -10,6 +10,7 @@ estiloMensagem();
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
+
     if(!(strlen($_POST['senha']) >= 12)) {
 
         echo "<p class='erro'>A senha deve conter pelo menos 12 caracteres!</p>"; 
@@ -26,15 +27,22 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         echo "<p class='erro'>A senha deve conter números!</p>";
 
+    } elseif($_POST['senha'] != $_POST['repete_senha']) {
+
+        echo "<p class='erro'>A s senhas não conferem!</p>";
+
     } else {
 
-        $cadastraUsuario = new Usuario($pdo);
-        $cadastraUsuario->cadastraUsuario($_POST['nome'], $_POST['usuario'], $_POST['senha']);
+        $minhaSenha = new Usuario($pdo);
+        $minhaSenha->minhaSenha($_POST['id'], $_POST['senha']);
     
         header("Refresh: 1.5 index.php");
-        echo "<p class='acao'>Usuário cadastrado com sucesso!</p>";
+        echo "<p class='acao'>Senha alterada com sucesso!</p>";
         die();
     }
+
+    $buscaIdSenha = new Usuario($pdo);
+    $idSenha = $buscaIdSenha->buscaIdSenha($_GET['id']);
 
 }
 
@@ -47,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Cadastrar usuário</title>
+    <title>Minha senha</title>
     <link rel="shortcut icon" type="imagex/png" href="img/id-logo-browser.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
@@ -75,26 +83,25 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         </header>
         
         <p><b>Usuário: </b><?= $_SESSION['nome'] ?></p>
+    
 
         <section class="centro">
             <form class="form-login" method="post">
                 <i class="fa-solid fa-right-to-bracket"></i>
 
-                <label>Nome completo
-                    <input type="text" name="nome" placeholder="Insira o nome" required>
-                </label>
-
-                <label>Usuário
-                    <input type="text" name="usuario" placeholder="Insira o usuario" required>
-                </label>
-
-                <label>Senha
+                <label>Nova senha
                     <input type="password" name="senha" placeholder="Insira a senha" required autocomplete="new-password">
                 </label>
 
+                <label>Repita a nova senha
+                    <input type="password" name="repete_senha" placeholder="Repita a senha" required autocomplete="new-password">
+                </label>
+
+                <input type="hidden" name="id" value="<?= $idSenha['id'] ?>">
+
                 <button type="submit">Cadastrar</button>
 
-                <p>Cadastro de usuário</p>
+                <p>Alterar senha</p>
 
             </form>
         </section>

@@ -179,6 +179,7 @@ h3 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 10px;
     background: #e4ebf2;
     text-align: center;
 }

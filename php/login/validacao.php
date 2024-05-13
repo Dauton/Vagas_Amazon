@@ -16,8 +16,10 @@
 
         if($resultado) {
             if(password_verify($senha, $resultado['senha'])) {
+                $_SESSION['id'] = $resultado['id'];
                 $_SESSION['usuario'] = $resultado['usuario'];
                 $_SESSION['senha'] = $resultado['senha'];
+                $_SESSION['nome'] = $resultado['nome'];
 
                 header("Location: ../../admin.php");
                 die();

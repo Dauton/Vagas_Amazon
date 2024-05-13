@@ -4,6 +4,7 @@
     require_once "php/Repositorio/Video.php";
     require_once "php/login/verifica_sessao.php";
     require_once "php/login/protecao.php";
+    require_once "php/function/style_msg.php";
 
     //========= EXIBE O VIDEO =========//
     $video = new Video($pdo);
@@ -40,10 +41,13 @@
                     <li><a href="admin.php"><button id="btn">Gerenciar vagas</button></a></li>
                     <li><a href="cadastro_usuario.php"><button id="btn">Cadastrar usuário</button></a></li>
                     <li><a href="admin_video.php"><button id="btn">Alterar vídeo</button></a></li>
+                    <li><a href="minha_senha.php?id=<?= $_SESSION['id'] ?>"><button id="btn">Minha senha</button></a></li>
                     <li><a href="php/login/logout.php"><button id="btn-logout">Sair</button></a></li>
                 </ul>
             </nav>
         </header>
+        
+        <p><b>Usuário: </b><?= $_SESSION['nome'] ?></p>
 
         <section id="centro-admin">
             <p>Video que está sendo exibido atualmente na página</p>

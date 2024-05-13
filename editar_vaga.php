@@ -4,14 +4,17 @@ require_once "php/banco/conn.php";
 require_once "php/Repositorio/Vagas.php";
 require_once "php/login/verifica_sessao.php";
 require_once "php/login/protecao.php";
+require_once "php/function/style_msg.php";
+
+estiloMensagem();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST')
 {
     $editaVaga = new Vagas($pdo);
     $editaVaga->editaVaga($_POST['id'], $_POST['uf'], $_POST['cidade'], $_POST['link']);
 
-    header("Refresh: 2 admin.php");
-    echo "Vaga editada com sucesso!";
+    header("Refresh: 1.5 admin.php");
+    echo "<p class='acao'>Vaga editada com sucesso!</p>";
     die();
 }
 
@@ -50,10 +53,13 @@ $vaga = $buscaIdVaga->buscaIdVaga($_GET['id']);
                     <li><a href="admin.php"><button id="btn">Gerenciar vagas</button></a></li>
                     <li><a href="cadastro_usuario.php"><button id="btn">Cadastrar usuário</button></a></li>
                     <li><a href="admin_video.php"><button id="btn">Alterar vídeo</button></a></li>
+                    <li><a href="minha_senha.php?id=<?= $_SESSION['id'] ?>"><button id="btn">Minha senha</button></a></li>
                     <li><a href="php/login/logout.php"><button id="btn-logout">Sair</button></a></li>
                 </ul>
             </nav>
         </header>
+        
+        <p><b>Usuário: </b><?= $_SESSION['nome'] ?></p>
 
         <section class="centro">
             <form class="form-login" method="post">

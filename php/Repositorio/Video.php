@@ -9,6 +9,7 @@
             $this->pdo = $pdo;
         }
 
+        //========= EXIBE O VIDEO =========//
         public function exibeVideo(): array
         {
             $sql = "SELECT * FROM tb_video";
@@ -17,7 +18,10 @@
             $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $resultado;
         }
+        //=========================================
 
+
+        //========= BUSCA O ID DO VIDEO PARA ALTERAÇÃO =========//
         public function buscaIDVideo(int $id): array
         {
             $sql = "SELECT * FROM tb_video WHERE id = ?";
@@ -27,7 +31,10 @@
             $resultado = $stmt->fetch();
             return $resultado;
         }
+        //========================================
 
+        
+        //========= ALTERA O VIDEO =========//
         public function alteraVideo(int $id, string $iframe) : void
         {
             $sql = "UPDATE tb_video SET iframe = ? WHERE id = ?";
@@ -37,4 +44,5 @@
             $stmt->execute();
 
         }
+        //=========================================
     }

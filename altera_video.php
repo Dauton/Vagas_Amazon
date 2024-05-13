@@ -4,14 +4,17 @@
     require_once "php/Repositorio/Video.php";
     require_once "php/login/verifica_sessao.php";
     require_once "php/login/protecao.php";
+    require_once "php/function/style_msg.php";
+
+    estiloMensagem();
 
     if($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         $editaVaga = new Video($pdo);
         $editaVaga->alteraVideo($_POST['id'], $_POST['iframe']);
 
-        header("Refresh: 2 admin_video.php");
-        echo "Vídeo alterado com sucesso!";
+        header("Refresh: 1.5 admin_video.php");
+        echo "<p class='acao'>Vídeo alterado com sucesso!<p>";
         die();
     }
 
@@ -55,10 +58,13 @@
                     <li><a href="admin.php"><button id="btn">Gerenciar vagas</button></a></li>
                     <li><a href="cadastro_usuario.php"><button id="btn">Cadastrar usuário</button></a></li>
                     <li><a href="admin_video.php"><button id="btn">Alterar vídeo</button></a></li>
+                    <li><a href="minha_senha.php?id=<?= $_SESSION['id'] ?>"><button id="btn">Minha senha</button></a></li>
                     <li><a href="php/login/logout.php"><button id="btn-logout">Sair</button></a></li>
                 </ul>
             </nav>
         </header>
+        
+        <p><b>Usuário: </b><?= $_SESSION['nome'] ?></p>
 
         <section  id="centro-admin"">
             <form class="form-login" method="post">

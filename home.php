@@ -82,27 +82,7 @@ $exibeVideo = $video->exibeVideo();
 
             <hr>
 
-            <h1 class="center-title"><i class="fa-solid fa-star"></i> #ORGULHO EM SER ID</h1>
-
-            <article class="center-sessao-video">
-                <h3>Aceleramos a transformação logística no Brasil 🇧🇷</h3>
-                <p>Com mais de 9 mil colaboradores, a ID Logistics é uma das maiores operadoras logísticas do Brasil! Atualmente, contamos com um milhão de metros quadrados de armazenagem, destinados à logística de players de grande porte em mais de 60 centros de distribuição espalhados no território brasileiro. Acreditamos que nosso maior valor são as nossas pessoas, estamos focados no desenvolvimento de nossos talentos, de forma que todos os nossos colaboradores sintam orgulho em pertencer ao agora e ao futuro de nossa empresa. Somos um só time, com uma responsabilidade e um único objetivo. Aqui temos <b>#OrgulhoEmSerID!</b></p>
-
-                
-                <?php foreach($exibeVideo as $video) : ?>
-                    <?= $video['iframe'] ?>
-                <?php endforeach ?>
-            </article>
-
-            <article class="center-sessao-imgs">
-                <img src="img/imagem03.jpg">
-                <img src="img/imagem06.jpg">
-                <img src="img/imagem01.jpg">
-            </article>
-
-        </section>
-
-        <section class="vagas">
+            <section class="vagas">
             <h1 class="center-title"><i class="fa-solid fa-star"></i> VENHA FAZER PARTE DO NOSSO TIME! <i class="fa-solid fa-star"></i></h1>
             <p><b>Confira</b> algumas oportunidades através de algumas agências parceiras! <b><br>#VempraID #OrgulhoEmSerID</b> 💙</p>
             <br>
@@ -125,6 +105,29 @@ $exibeVideo = $video->exibeVideo();
                     
                 </tbody>
             </table>
+
+        </section>
+
+            <hr>
+
+            <h1 class="center-title"><i class="fa-solid fa-star"></i> #ORGULHO EM SER ID</h1>
+
+            <article class="center-sessao-video">
+                <h3>Aceleramos a transformação logística no Brasil 🇧🇷</h3>
+                <p>Com mais de 9 mil colaboradores, a ID Logistics é uma das maiores operadoras logísticas do Brasil! Atualmente, contamos com um milhão de metros quadrados de armazenagem, destinados à logística de players de grande porte em mais de 60 centros de distribuição espalhados no território brasileiro. Acreditamos que nosso maior valor são as nossas pessoas, estamos focados no desenvolvimento de nossos talentos, de forma que todos os nossos colaboradores sintam orgulho em pertencer ao agora e ao futuro de nossa empresa. Somos um só time, com uma responsabilidade e um único objetivo. Aqui temos <b>#OrgulhoEmSerID!</b></p>
+                
+                <?php foreach($exibeVideo as $video) : ?>
+                    <?= $video['iframe'] ?>
+                <?php endforeach ?>
+            </article>
+            
+            <hr>
+
+            <article class="center-sessao-imgs">
+                <img src="img/imagem03.jpg">
+                <img src="img/imagem06.jpg">
+                <img src="img/imagem01.jpg">
+            </article>
 
         </section>
 
